@@ -14,7 +14,7 @@ while attempts > 0:
   else: 
     word += ""
   if len(guess) > 1 or not guess.isalpha():
-    print("Please enter a single valid letter." 
+    print("Please enter a single valid letter.") 
     continue 
   if guess in guessed_letters:
     print("Already guessed.") 
