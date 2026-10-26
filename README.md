@@ -6,7 +6,7 @@ answer = random.choice(wordbank)
 guessed_letters = []
 attempts = 6 
 while attempts > 0: 
-  guess = input("Guess a letter").lower() 
+  guess = input("Guess a letter: ").lower() 
   word = ""
   for letter in answer: 
     if letter in guessed_letters:
@@ -14,10 +14,10 @@ while attempts > 0:
     else: 
       word += "_ "
   if len(guess) > 1 or not guess.isalpha():
-    print("Please enter a single valid letter.") 
+    print("Please enter a single valid letter. ") 
     continue 
   if guess in guessed_letters:
-    print("Already guessed.") 
+    print("Already guessed. ") 
     continue 
   guessed_letters.append(guess) 
   
