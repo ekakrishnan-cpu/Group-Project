@@ -6,7 +6,7 @@ answer = random.choice(wordbank)
 guessed_letters = []
 attempts = 6 
 while attempts > 0: 
-  guess = input("Guess a letter") 
+  guess = input("Guess a letter").lower() 
   word = ""
   for letter in answer: 
     if letter in guessed_letters:
@@ -24,7 +24,8 @@ while attempts > 0:
   else: 
     print(f"Sorry, {guess} is not in the word") 
     attempts -= 1
-if all(letter in guessed_letters for letter in answer): 
-  print(f"Congrats! the word was '{answer}'!") 
+  if all(letter in guessed_letters for letter in answer): 
+    print(f"Congrats! the word was '{answer}'!")
+    break
 else:
   print(f"Game over. The word was '{answer}'")
