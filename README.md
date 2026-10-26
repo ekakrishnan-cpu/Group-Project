@@ -9,7 +9,7 @@ attempts = 6
 while attempts > 0: 
   word = ""
   for letter in answer: 
-  if letter in guessed_letters:
+    if letter in guessed_letters:
     word += letter + ""
   else: 
     word += ""
