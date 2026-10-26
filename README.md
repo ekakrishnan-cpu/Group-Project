@@ -1,7 +1,11 @@
 # Group-Project
 import random 
 while True: 
-  print("Let's play hangman!")
+  print("Let's play hangman! But first, let's cover some rules.")
+  print("A secret word has been chosen from our word bank.")
+  print("You have 6 attempts to guess all the letters of that word.")
+  print("Type one letter at a time and press Enter.")
+  print("Wrong guesses reduce the attempts you have left.")
   wordbank = ['group', 'types', 'computer', 'python', 'coder'] 
   answer = random.choice(wordbank) 
   guessed_letters = []
