@@ -24,7 +24,7 @@ while attempts > 0:
   else: 
     print("Sorry, {guess} is not in the word") 
     attempts -= 1
-  if all(letter in guessed_letters for letter in answer): 
-    print("Congrats! the word was '{answer}'!") 
-  else:
-    print("Game over. The word was '{answer}'")
+if all(letter in guessed_letters for letter in answer): 
+  print("Congrats! the word was '{answer}'!") 
+else:
+  print("Game over. The word was '{answer}'")
