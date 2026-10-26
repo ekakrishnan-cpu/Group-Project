@@ -10,7 +10,7 @@ while attempts > 0:
   word = ""
   for letter in answer: 
     if letter in guessed_letters:
-    word += letter + ""
+      word += letter + ""
   else: 
     word += ""
   if len(guess) > 1 or not guess.isalpha():
@@ -25,6 +25,6 @@ while attempts > 0:
     print("Sorry, {guess} is not in the word") 
     attempts -= 1
   if all(letter in guessed_letters for letter in answer): 
-    print("Congratis! the word was '{answer}'!" 
+    print("Congrats! the word was '{answer}'!" 
   else:
     print("Game over. The word was '{answer}'")
