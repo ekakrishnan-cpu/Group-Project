@@ -11,14 +11,16 @@ while attempts > 0:
   for letter in answer: 
     if letter in guessed_letters:
       word += letter + ""
-  else: 
-    word += ""
+    else: 
+      word += "_ "
   if len(guess) > 1 or not guess.isalpha():
     print("Please enter a single valid letter.") 
     continue 
   if guess in guessed_letters:
     print("Already guessed.") 
     continue 
+  guessed_letters.append(guess) 
+  
   if guess in answer:
     print(f"Good job! '{guess}' is in the word") 
   else: 
