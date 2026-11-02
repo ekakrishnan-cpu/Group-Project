@@ -39,7 +39,8 @@ while True: #instructions and general info
         else: 
             print(f"Sorry, {guess} is not in the word")  #user is wrong
             attempts -= 1
-            print("Lives left:", attempts)
+        
+        print("Lives left:", attempts)
             
         if all(letter in guessed_letters for letter in answer): #the user must enter all the correct letters in the word 
             print(f"Congrats! the word was '{answer}'!")
