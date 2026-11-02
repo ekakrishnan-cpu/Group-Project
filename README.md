@@ -14,7 +14,7 @@ while True: #instructions and general info
     attempts = 6 
     
     while attempts > 0: #user guesses words when attempts are greater than 0
-        word_display = ""
+        word_display = "" # this is what causes the computer to print the blanks and the word in the correct place among those blanks (ex. _ _ p _ _ ) 
         for letter in answer:
             if letter in guessed_letters:
                 word_display += letter + " "
@@ -40,7 +40,7 @@ while True: #instructions and general info
             print(f"Sorry, {guess} is not in the word")  #user is wrong
             attempts -= 1
         
-        print("Lives left:", attempts)
+        print("Lives left:", attempts)  #prints attempts regardless of guessing right or wrong
             
         if all(letter in guessed_letters for letter in answer): #the user must enter all the correct letters in the word 
             print(f"Congrats! the word was '{answer}'!")
